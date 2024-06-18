@@ -2,9 +2,48 @@
 import { ref } from 'vue';
 import AppMenuItem from './AppMenuItem.vue';
 const model = ref([
+    // {
+    //     label: 'Dashboard',
+    //     items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }] 
+    // },
     {
-        label: 'Home',
-        items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
+        label: 'การจัดการ',
+        items: [
+            { label: 'หน้าหลัก', icon: 'pi pi-fw pi-home', to: '/' },
+            { label: 'ใบเบิกวัสดุ', icon: 'pi pi-fw pi-shopping-cart', to: '/management/withdraw_materials' },
+            { label: 'ใบเบิกครุภัณฑ์', icon: 'pi pi-fw pi-th-large', to: '/management/withdraw_equipment' },
+            { label: 'ใบยืม-คืนครุภัณฑ์', icon: 'pi pi-fw pi-sort-alt', to: '/management/borrow_return' },
+            { label: 'ตรวจสอบครุภัณฑ์', icon: 'pi pi-fw pi-qrcode', to: '/management/checkEm' }
+        ]
+    },
+    {
+        label: 'สต๊อก',
+        items: [
+            { label: 'จัดการประเภทสต๊อก', icon: 'pi pi-fw pi-sliders-v', to: '/stock/stock_set' },
+            { label: 'วัสดุเข้าสต๊อก', icon: 'pi pi-fw pi-inbox', to: '/stock/stock_materials' }
+        ]
+    },
+    {
+        label: 'รายงาน',
+        items: [
+            { label: 'วัสดุคงคลัง', icon: 'pi pi-fw pi-database', to: '/report/inventory_materials' },
+            { label: 'รายงานการเบิกวัสดุ', icon: 'pi pi-fw pi-server', to: '/report/re_withdraw_materials' },
+            { label: 'รายงานการเบิกครุภัณฑ์', icon: 'pi pi-fw pi-list', to: '/report/re_withdraw_equipment' },
+            { label: 'รายงานการยืม-คืนครุภัณฑ์', icon: 'pi pi-fw pi-align-left', to: '/report/re_borrow_return' },
+            { label: 'รายงานการตรวจสอบครุภัณฑ์', icon: 'pi pi-fw pi-check-square', to: '/report/re_checkEm' }
+        ]
+    },
+    {
+        label: 'ตั้งค่า',
+        items: [
+            { label: 'จัดการกรรมการ', icon: 'pi pi-fw pi-users', to: '/setting/manage_directors' }
+        ]
+    },
+    {
+        label: 'คู่มือ',
+        items: [
+            { label: 'คู่มือการใช้งาน', icon: 'pi pi-fw pi-book', to: '/book_manual' }
+        ]
     },
     {
         label: 'UI Components',

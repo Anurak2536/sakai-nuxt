@@ -10,7 +10,8 @@ module.exports = {
         'vue/component-tags-order': [
             'error',
             {
-                order: ['script', 'template', 'style']
+                // order: ['template', 'script', 'style']
+                // order: ['script', 'template', 'style']
             }
         ]
     }
